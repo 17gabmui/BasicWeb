@@ -19,8 +19,8 @@
       var request = new XMLHttpRequest();
       var dev_id = '<your device id here>';
       var access = '<your access token here>';
-      var data = 'params='+newValue+'&access_token='963f686a0a85a7e9a2f8cd283391789adb47ce65;
-      var url = 'https://api.particle.io/v1/devices/'320026000f47353136383631'/setpos/';
+      var data = 'params='+newValue+'&access_token='+963f686a0a85a7e9a2f8cd283391789adb47ce65+;
+      var url = 'https://api.particle.io/v1/devices/'+320026000f47353136383631+'/setpos/';
       request.open('POST', url, true);
       request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
       request.send(data);

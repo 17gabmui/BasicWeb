@@ -101,7 +101,7 @@ function sendToParticle(myIn){
 
 </head>
 
-<body onload="{
+<body background="http://pngimg.com/uploads/duck/duck_PNG4998.png?i=1" onload="{
    myStorage1 = localStorage.getItem('myStoredText1')
    if(myStorage1  != null){     
       document.getElementById('myToken').value = myStorage1 
@@ -170,13 +170,6 @@ Get this from the settings area when logged into <a href="http://particle.io/bui
    
 <!-- ********************* END OF:       DO NOT MESS WITH THIS ADVANCED STUFF -->      
 
-<style>
-div {
-    background: url("http://pngimg.com/uploads/duck/duck_PNG4998.png?i=1");
-    background-size: 40px 40px;
-    background-repeat: no-repeat;
-}
-   </style>   
 
 <input type="button" value="Start Quack" onClick="{
     sendToParticle('digitalWrite(D7,HIGH);')

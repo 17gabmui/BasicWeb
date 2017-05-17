@@ -94,21 +94,14 @@ function sendToParticle(myIn){
 //--></script>
 
 
-  <style>
-body  {
-    background-image: url("http://pngimg.com/uploads/duck/duck_PNG4998.png?i=1");
-    background-color: #660066;
-    background-size: 100px 100px
-}
-</style> 
 
 
 
 
 
+</head>
 
-
-
+<body onload="{
    myStorage1 = localStorage.getItem('myStoredText1')
    if(myStorage1  != null){     
       document.getElementById('myToken').value = myStorage1 
@@ -168,28 +161,47 @@ Get this from the settings area when logged into <a href="http://particle.io/bui
    alert('Device ID =' + document.all.myDeviceId.value +'\n\nAccess Token='+ document.all.myToken.value +' \n\nHas been stored')
 }">
 
+
+
+
+
+
 <br><br>
- 
+
+
+   
+ <input type="button" value="WHOAMI" onClick="{
+    sendToParticle('WHOAMI(xx,1)')
+}"> 31=Raspberry PI, 6=Photon<br>  
+   
+ <input type="button" value="Activate Loop" onClick="{
+    if (this.value == 'Activate Loop'){                                                 
+        sendToParticle('loop(xx,1);') 
+        this.value = 'Stop Looping'
+    } else {
+        sendToParticle('loop(xx,0);')  
+        this.value = 'Activate Loop'
+    }
+}"> Direct microprocessor looped control <br><br>
+   
+   
+   
   
 <div width="400" height="200" name="myDivName" id="myDivId"> output here </div><hr>
    
    
    
-<!-- ********************* END OF:       DO NOT MESS WITH THIS ADVANCED STUFF -->      
+<!-- ********************* END OF:       DO NOT MESS WITH THIS ADVANCED STUFF -->  
+<html>
+<head>
+<style>
+body  {
+    background-image: url("http://pngimg.com/uploads/duck/duck_PNG4998.png?i=1");
+    background-color: #669966;
+    background-size 100px 100px;
+}
+</style>
+</head>
+   </html>
+  
 
-
-<input type="button" value="Start Quack" onClick="{
-    sendToParticle('digitalWrite(D7,HIGH);')
-}">
-
-<input type="button" value="Stop Quack" onClick="{
-    sendToParticle('digitalWrite(D7,LOW);')
-}"><br> 
-
- <br><br>   
-
-     
-<br>
-</font>
-</body>
-</html>

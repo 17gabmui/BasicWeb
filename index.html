@@ -94,14 +94,21 @@ function sendToParticle(myIn){
 //--></script>
 
 
+  <style>
+body  {
+    background-image: url("http://pngimg.com/uploads/duck/duck_PNG4998.png?i=1");
+    background-color: #660066;
+    background-size: 100px 100px
+}
+</style> 
 
 
 
 
 
-</head>
 
-<body style={ background: url("http://pngimg.com/uploads/duck/duck_PNG4998.png?i=1");  background-repeat: no-repeat;} onload="{
+
+
    myStorage1 = localStorage.getItem('myStoredText1')
    if(myStorage1  != null){     
       document.getElementById('myToken').value = myStorage1 
